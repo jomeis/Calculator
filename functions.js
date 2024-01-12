@@ -1,10 +1,10 @@
-var numb1 = document.getElementById('numb1').value;
-var numb2 = document.getElementById('numb2').value;
 const numb2Input = document.getElementById('numb2');
 const numb1Input = document.getElementById('numb1');
 
 function saveAndDisplay() {
     var selectedOperation = document.getElementById('operation').value; 
+    var numb1 = document.getElementById('numb1').value;
+    var numb2 = document.getElementById('numb2').value;
 
     switch(selectedOperation) {
         case 'subtract': 
