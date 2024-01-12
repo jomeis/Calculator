@@ -52,6 +52,11 @@ function saveAndDisplay() {
 
     document.getElementById('answer').innerText = answer;
 
+    if(selectedChar1 == "prevAnswer"){
+        specialChar1.value = "";
+    } else if (selectedChar2 == "prevAnswer"){
+        specialChar2.value = "";
+    }
 
     
 }
@@ -65,23 +70,24 @@ function specialChar() {
     switch(selectedChar1) {
         case 'pi':
             numb1Input.value = Math.PI;
+            break;
         case 'prevAnswer':
             numb1Input.value = prevAnswer;
+            break;
             
     }
 
     switch(selectedChar2) {
         case 'pi':
             numb2Input.value = Math.PI;
+            break;
         case 'prevAnswer':
             numb2Input.value = prevAnswer;
+            break;
+
     }
 }
 
-function inputChanged(changed) {
-    if(changed == 1){
-        specialChar1.value = "";
-    } else if (changed == 2){
-        specialChar2.value = "";
-    }
-}
+
+
+
