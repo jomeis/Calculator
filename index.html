@@ -15,6 +15,13 @@
         <label for="inputField" id="numb1Text">Enter first numb:</label><!--  num1 -->
         <br>
         <input type="number" id="numb1" name="numb1">
+        <select id="numb1Options" name="numb1Options" onchange="specialChar()">
+            <option value="">Special Options</option>
+            <option value=""></option>
+            <option value="prevAnswer">PrevAnswer</option>
+            <option value="Fractions">Fractions</option>
+            <option value="pi">π</option>
+        </select>
         <br><br>
 
         <label for="operation">Select Operation:</label>
@@ -32,6 +39,13 @@
         <label for="inputField" id="numb2Text">Enter second numb:</label><!--  num2 -->
         <br>
         <input type="number" id="numb2" name="numb2">
+        <select id="numb2Options" name="numb2Options" onchange="specialChar()">
+            <option value="">Special Options</option>
+            <option value=""></option>
+            <option value="prevAnswer">PrevAnswer</option>
+            <option value="Fractions">Fractions</option>
+            <option value="pi">π</option>
+        </select>
         <br>
         <button type="button" onclick="saveAndDisplay()">Submit</button>
         <p>your answer: </p><p id="answer"></p>
