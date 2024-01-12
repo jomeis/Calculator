@@ -6,12 +6,28 @@
     <title>Calculator</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👾</text></svg>"></link>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="font\font\stylesheet.css">
 </head>
 <body>
-    <div class="card">
+    <div class="head">
         <h1>Welcome to calculator </h1>
     </div>
+    <hr>
+    <div class="calculatorPart">
+        <label for="inputField">Enter first numb:</label><!--  num1 -->
+        <br>
+        <input type="number" id="numb1" name="numb1">
+        <br>
+        <label for="inputField">Enter second numb:</label><!--  num2 -->
+        <br>
+        <input type="number" id="numb2" name="numb2">
+        <br>
+        <button type="button" onclick="saveAndDisplay()">Save Input</button>
+        <p>your answer: </p><p id="answer"></p>
+    </div>
+
 </body>
+<footer>
+    <script src="functions.js"></script>
+</footer>
 </html>
 
