@@ -40,10 +40,10 @@ function saveAndDisplay() {
             document.getElementById('numb1Text').innerText = "Index:";
             document.getElementById('numb2Text').innerText = "Radicand:";
             break;
-        case 'add':
-            var answer = +numb1 + +numb2; // PrevAnswer
-            document.getElementById('numb1Text').innerText = "Enter first numb:";
-            document.getElementById('numb2Text').innerText = "Enter second numb:";
+        case 'log':
+            var answer = Math.log(+numb2) / Math.log(+numb1); // log
+            document.getElementById('numb1Text').innerText = "Base:";
+            document.getElementById('numb2Text').innerText = "Argument:";
             break;  
       }
 
