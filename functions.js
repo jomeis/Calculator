@@ -1,10 +1,14 @@
 const numb2Input = document.getElementById('numb2');
 const numb1Input = document.getElementById('numb1');
+var specialChar1 = document.getElementById('numb1Options');
+var specialChar2 = document.getElementById('numb2Options');
 
 function saveAndDisplay() {
     var selectedOperation = document.getElementById('operation').value; 
     var numb1 = document.getElementById('numb1').value;
     var numb2 = document.getElementById('numb2').value;
+    var selectedChar1 = document.getElementById('numb1Options').value; 
+    var selectedChar2 = document.getElementById('numb2Options').value; 
 
     switch(selectedOperation) {
         case 'subtract': 
@@ -47,20 +51,37 @@ function saveAndDisplay() {
       }
 
     document.getElementById('answer').innerText = answer;
+
+
+    
 }
 
 function specialChar() {
     var selectedChar1 = document.getElementById('numb1Options').value; 
     var selectedChar2 = document.getElementById('numb2Options').value; 
 
+    prevAnswer = document.getElementById("answer").innerHTML
+
     switch(selectedChar1) {
         case 'pi':
             numb1Input.value = Math.PI;
+        case 'prevAnswer':
+            numb1Input.value = prevAnswer;
+            
     }
 
     switch(selectedChar2) {
         case 'pi':
             numb2Input.value = Math.PI;
+        case 'prevAnswer':
+            numb2Input.value = prevAnswer;
     }
+}
 
+function inputChanged(changed) {
+    if(changed == 1){
+        specialChar1.value = "";
+    } else if (changed == 2){
+        specialChar2.value = "";
+    }
 }
