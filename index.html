@@ -14,7 +14,7 @@
     <div class="calculatorPart">
         <label for="inputField" id="numb1Text">Enter first numb:</label><!--  num1 -->
         <br>
-        <input type="number" id="numb1" name="numb1">
+        <input type="number" id="numb1" name="numb1" onchange="inputChanged(1)">
         <select id="numb1Options" name="numb1Options" onchange="specialChar()">
             <option value="">Special Options</option>
             <option value=""></option>
@@ -38,7 +38,7 @@
         <br><br>
         <label for="inputField" id="numb2Text">Enter second numb:</label><!--  num2 -->
         <br>
-        <input type="number" id="numb2" name="numb2">
+        <input type="number" id="numb2" name="numb2" onchange="inputChanged(2)">
         <select id="numb2Options" name="numb2Options" onchange="specialChar()">
             <option value="">Special Options</option>
             <option value=""></option>
