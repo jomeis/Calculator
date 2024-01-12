@@ -1,11 +1,10 @@
+var numb1 = document.getElementById('numb1').value;
+var numb2 = document.getElementById('numb2').value;
+const numb2Input = document.getElementById('numb2');
+const numb1Input = document.getElementById('numb1');
+
 function saveAndDisplay() {
-
-    var numb1 = document.getElementById('numb1').value;
-    var numb2 = document.getElementById('numb2').value;
-    var selectedOperation = document.getElementById('operation').value;
-
-    console.log('User Input 1:', numb1);
-    console.log('User Input 2:', numb2);
+    var selectedOperation = document.getElementById('operation').value; 
 
     switch(selectedOperation) {
         case 'subtract': 
@@ -30,8 +29,8 @@ function saveAndDisplay() {
             break;
         case 'caret':
             var answer = Math.pow(+numb1, +numb2); // ^
-            document.getElementById('numb1Text').innerText = "Base";
-            document.getElementById('numb2Text').innerText = "Exponent";
+            document.getElementById('numb1Text').innerText = "Base:";
+            document.getElementById('numb2Text').innerText = "Exponent:";
             break;
         case 'root':
             var answer =  Math.pow(+numb2, 1/+numb1); // root
@@ -48,4 +47,20 @@ function saveAndDisplay() {
       }
 
     document.getElementById('answer').innerText = answer;
+}
+
+function specialChar() {
+    var selectedChar1 = document.getElementById('numb1Options').value; 
+    var selectedChar2 = document.getElementById('numb2Options').value; 
+
+    switch(selectedChar1) {
+        case 'pi':
+            numb1Input.value = Math.PI;
+    }
+
+    switch(selectedChar2) {
+        case 'pi':
+            numb2Input.value = Math.PI;
+    }
+
 }
