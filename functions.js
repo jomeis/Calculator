@@ -88,6 +88,11 @@ function specialChar() {
     }
 }
 
-
+numb1Input.addEventListener('input', function() {
+    specialChar1.value = "";
+});
+numb2Input.addEventListener('input', function() {
+    specialChar2.value = "";
+});
 
 
